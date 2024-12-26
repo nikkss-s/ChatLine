@@ -19,7 +19,7 @@ function Register() {
 
   function submitRegister(obj) {
     axios
-      .post("https://chatline-dhx9.onrender.com/user-api/register", obj)
+      .post("https://chatline-gz0q.onrender.com/user-api/register", obj)
       .then((res) => {
         if (res.data.success === true) {
           navigate("/login");

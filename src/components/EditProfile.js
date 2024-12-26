@@ -12,7 +12,7 @@ function EditProfile({ show, setShow }) {
 
     axios
       .post(
-        "https://chatline-dhx9.onrender.com/user-api/profile-update",
+        "https://chatline-gz0q.onrender.com/user-api/profile-update",
         updatedProfile
       )
       .then((res) => {
@@ -29,7 +29,7 @@ function EditProfile({ show, setShow }) {
     let host = localStorage.getItem("user");
 
     axios
-      .get("https://chatline-dhx9.onrender.com/user-api/get-users")
+      .get("https://chatline-gz0q.onrender.com/user-api/get-users")
       .then(async (res) => {
         let user = await res.data.users.filter((obj) => obj.userid === host);
         user = user[0];

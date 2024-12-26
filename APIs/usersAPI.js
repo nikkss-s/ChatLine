@@ -7,6 +7,7 @@ const dotenv = require("dotenv").config();
 const sendEmail = require("./sendEmail");
 
 const expressAsyncHandler = require("express-async-handler");
+const { CleanPlugin } = require("webpack");
 
 userApp.get(
   "/get-users",
@@ -56,7 +57,7 @@ userApp.post(
     const usersCollectionObj = req.app.get("usersCollectionObj");
 
     const user = req.body;
-
+    
     let userObj = await usersCollectionObj.findOne({ userid: user.userid });
 
     if (userObj === null) {

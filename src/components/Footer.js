@@ -43,7 +43,7 @@ function Footer({ person }) {
     if (value.length !== 0) {
       axios
         .post(
-          "https://chatline-dhx9.onrender.com/conversation-api/send-message",
+          "https://chatline-gz0q.onrender.com/conversation-api/send-message",
           obj
         )
         .then((res) => {
@@ -106,7 +106,7 @@ function Footer({ person }) {
     fd.append("file", file);
 
     axios
-      .post("https://chatline-dhx9.onrender.com/conversation-api/send-file", fd)
+      .post("https://chatline-gz0q.onrender.com/conversation-api/send-file", fd)
       .then((res) => {
         setValue("");
         setSpin(false);

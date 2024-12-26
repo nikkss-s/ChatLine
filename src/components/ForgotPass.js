@@ -20,7 +20,7 @@ function ForgotPass() {
   function submitEmail(obj) {
     setUser(obj.userid);
     axios
-      .post("https://chatline-dhx9.onrender.com/user-api/sendemail", obj)
+      .post("https://chatline-gz0q.onrender.com/user-api/sendemail", obj)
       .then((res) => {
         if (res.data.success === true) {
           setErr("");
@@ -39,7 +39,7 @@ function ForgotPass() {
     obj.token = localStorage.getItem("otpToken");
     obj.hashedOtp = localStorage.getItem("hashedOtp");
     axios
-      .post("https://chatline-dhx9.onrender.com/user-api/verifyotp", obj)
+      .post("https://chatline-gz0q.onrender.com/user-api/verifyotp", obj)
       .then((res) => {
         if (res.data.success === true) {
           setErr("");
@@ -54,7 +54,7 @@ function ForgotPass() {
   function submitNewPass(obj) {
     obj.userid = user;
     axios
-      .post("https://chatline-dhx9.onrender.com/user-api/update-password", obj)
+      .post("https://chatline-gz0q.onrender.com/user-api/update-password", obj)
       .then((res) => {
         if (res.data.success === true) {
           alert(res.data.message);

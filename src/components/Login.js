@@ -15,7 +15,7 @@ function Login() {
 
   function submitLogin(obj) {
     axios
-      .post("https://chatline-dhx9.onrender.com/user-api/login", obj)
+      .post("https://chatline-gz0q.onrender.com/user-api/login", obj)
       .then((res) => {
         if (res.data.success === true) {
           localStorage.setItem("token", res.data.token);
