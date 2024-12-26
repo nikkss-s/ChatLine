@@ -72,7 +72,7 @@ function Login() {
             {" "}
             Login To <i>Cht</i>
           </h1>
-          {err.length !== 0 && <p className="lead text-danger">*{err}</p>}
+          {err?.length !== 0 && <p className="lead text-danger">*{err}</p>}
           <div className="d-flex flex-column">
             <input
               type="text"
