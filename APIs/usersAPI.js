@@ -128,7 +128,7 @@ userApp.post("/sendemail", async (req, res) => {
     const send_to = email;
     const sent_from = process.env.EMAIL_USER;
     const reply_to = email;
-    const subject = "OTP from CVM for Account Verification";
+    const subject = "OTP from ChatLine for Account Verification";
     const message = message_;
 
     let token = jwt.sign({ otp: otp }, process.env.SECRET_KEY, {
