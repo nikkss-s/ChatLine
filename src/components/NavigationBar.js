@@ -27,7 +27,7 @@ function NavigationBar() {
     const token = localStorage.getItem("token");
 
     axios
-      .post("https://chatline-dhx9.onrender.com//user-api/pathjump", { token: token })
+      .post("https://chatline-dhx9.onrender.com/user-api/pathjump", { token: token })
       .then((res) => {
         if (res.data.success !== true) {
           localStorage.clear();

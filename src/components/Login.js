@@ -15,7 +15,7 @@ function Login() {
 
   function submitLogin(obj) {
     axios
-      .post("https://chatline-dhx9.onrender.com//user-api/login", obj)
+      .post("https://chatline-dhx9.onrender.com/user-api/login", obj)
       .then((res) => {
         if (res.data.success === true) {
           localStorage.setItem("token", res.data.token);
@@ -72,7 +72,7 @@ function Login() {
             {" "}
             Login To <i>Cht</i>
           </h1>
-          {err?.length !== 0 && <p className="lead text-danger">*{err}</p>}
+          {err.length !== 0 && <p className="lead text-danger">*{err}</p>}
           <div className="d-flex flex-column">
             <input
               type="text"

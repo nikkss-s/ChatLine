@@ -14,14 +14,14 @@ function AllChats({ show, setShow, message, setMessage, showPerson }) {
     setHost(localStorage.getItem("user"));
 
     axios
-      .get("https://chatline-dhx9.onrender.com//user-api/get-users")
+      .get("https://chatline-dhx9.onrender.com/user-api/get-users")
       .then((res) => setUserId(res.data.users))
       .catch((err) => console.log(err));
   }, [showModal]);
 
   function handleChange(event) {
     axios
-      .get("https://chatline-dhx9.onrender.com//user-api/get-users")
+      .get("https://chatline-dhx9.onrender.com/user-api/get-users")
       .then((res) =>
         setUserId(
           res.data.users.filter((obj) =>
