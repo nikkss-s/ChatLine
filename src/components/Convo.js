@@ -44,7 +44,7 @@ function Convo({ person, setShow, setMessage, search }) {
     let hosting = localStorage.getItem("user");
 
     axios
-      .post("http://localhost:3500/conversation-api/get-messages", {
+      .post("https://chatline-dhx9.onrender.com//conversation-api/get-messages", {
         host: hosting,
         person: person.userid,
       })
@@ -94,7 +94,7 @@ function Convo({ person, setShow, setMessage, search }) {
   const handleDownload = async (obj) => {
     try {
       let response = await axios.post(
-        "http://localhost:3500/conversation-api/download-file",
+        "https://chatline-dhx9.onrender.com//conversation-api/download-file",
         obj,
         { responseType: "blob" }
       );
@@ -124,7 +124,7 @@ function Convo({ person, setShow, setMessage, search }) {
     handleClose();
     axios
       .post(
-        "http://localhost:3500/conversation-api/delete-message",
+        "https://chatline-dhx9.onrender.com//conversation-api/delete-message",
         deleteObject
       )
       .then((res) => {
